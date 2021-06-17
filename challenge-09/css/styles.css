@@ -44,8 +44,26 @@ body {
 
 .sidebar {
     width: 30%;
+    background-color: #00C54C;
+    padding: 15px;
+    margin: 35px 10px;
+}
+
+.siderbar .sub-heading {
+    margin-top: 0;
 }
 
 .col-right {
     margin-left: 25px;
+}
+
+.source-link {
+    font-size: 10px;
+}
+.source-link a {
+    color: #281B2D;
+}
+
+.source-link a:hover {
+    color: #FFF;
 }
