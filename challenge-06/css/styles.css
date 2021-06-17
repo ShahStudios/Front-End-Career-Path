@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+.title {
+    font-size: 72px;
+    color: #fff;
+    background-color: #281B2D;
+    margin: 0;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.sub-heading {
+    font-size: 42px;
+    color: #FCD801;
+    background-color: #281B2D;
+    border-bottom: solid 8px #00C54C;
+    padding: 20px;
+}
