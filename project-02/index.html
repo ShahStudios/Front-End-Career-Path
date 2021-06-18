@@ -4,9 +4,16 @@
     </head>
     <body>
         <h1>People entered:</h1>
-        <h2 id="count-el">0</h2>
+        <h2 id="counter">0</h2>
         <!-- Create a INCREMENT button with the id="increment-btn" -->
         <button id='increment-btn' onclick="increment()">Increment</button>
+        <!-- 2. Create a SAVE button.
+        Set the id to "save-btn" and call the save() function when it's clicked -->
+        <button id='save-btn' onclick="save()">Save</button>
+        
+        <p id="save-el">Previous entires: </p>
+
+
         <script src='./js/index.js'></script>
     </body>
 </html>

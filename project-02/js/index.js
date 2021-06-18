@@ -1,11 +1,21 @@
-// intialize the count as 0
-// listen for clicks on the increment button
-// increment the count variable when the button is clicked
-// change the count-el in the HTML to reflect the new count
+const saveEL = document.getElementById('save-el')
+const displayCount = document.getElementById('counter')
 
 let count = 0
 
 function increment() {
     count++
-    console.log(count)
+    displayCount.textContent = count
+    // console.log(count)
 }
+
+function save() {
+    // reate a variable that contains both the count and the dash separator, i.e. "12 - "
+    let previousCount = count + ' - '
+    // Render the variable in the saveEl using innerText
+    saveEL.textContent += previousCount
+    // Make sure to not delete the existing content of the paragraph
+    displayCount.innerHTML = 0
+    count = 0
+}
+
