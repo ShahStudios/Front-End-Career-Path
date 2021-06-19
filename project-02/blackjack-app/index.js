@@ -12,6 +12,10 @@ let isAlive = true
 let message = ""
 
 function startGame() {
+    renderGame()
+}
+
+function renderGame() {
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
     sumEl.textContent = "Sum: " + sum
 
@@ -29,4 +33,9 @@ function startGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck!")
+    let card = 6
+
+    sum += card
+
+    renderGame()
 }
