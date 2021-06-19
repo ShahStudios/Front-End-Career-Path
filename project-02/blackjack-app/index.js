@@ -1,3 +1,5 @@
+let messageEl = document.getElementById("message-el")
+
 let firstCard = 10
 let secondCard = 4
 let sum = firstCard + secondCard
@@ -17,5 +19,5 @@ function startGame() {
         message = "You're out of the game! 😭"
         isAlive = false
     }
-    console.log(message)    
+    messageEl.textContent = message
 }
