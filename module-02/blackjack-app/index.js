@@ -2,16 +2,15 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
+let cardsArray = []
+let sum = 0
+let hasBlackJack = false
+let message = ""
 
 let player = {
     name: 'Shah',
     chips: 21
 }
-
-let cardsArray = []
-let sum = 0
-let hasBlackJack = false
-let message = ""
 
 playerEl.textContent = "Player: " + player.name + " | Chips: $" + player.chips
 
@@ -39,7 +38,6 @@ function renderGame() {
     for (let i = 0; i < cardsArray.length; i++) {
         cardsEl.textContent += cardsArray[i] + " "
     }
-
     sumEl.textContent = "Sum: " + sum
 
     if (sum <= 20) {
