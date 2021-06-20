@@ -3,9 +3,8 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 
-
-let firstCard = 10
-let secondCard = 4
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 
 let cardsArray = [firstCard, secondCard]
 let sum = cardsArray[0] + cardsArray[1]
@@ -15,6 +14,10 @@ let isAlive = true
 let message = ""
 let cards = [firstCard, secondCard]
 
+function getRandomCard() {
+    return Math.floor(Math.random() * 13) + 1
+}
+
 function startGame() {
     renderGame()
 }
@@ -22,7 +25,7 @@ function startGame() {
 function renderGame() {
     
     for (let i=0; i<cardsArray.length; i++) {
-        cardsEl.textContent = "Cards: " + cardsArray[i]
+        cardsEl.textContent +=  cardsArray[i] + " "
     }
 
     sumEl.textContent = "Sum: " + sum
@@ -41,7 +44,7 @@ function renderGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck!")
-    let card = 6
+    let card = getRandomCard()
     sum += card
     cardsArray.push(card)
     renderGame()
