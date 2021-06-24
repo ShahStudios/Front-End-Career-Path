@@ -22,16 +22,14 @@ pushBtn.addEventListener("click", function () {
     render()
 })
 
-unshiftBtn.addEventListener("click", function() {
+unshiftBtn.addEventListener("click", function () {
     if (emojiInput.value) {
         myEmojis.unshift(emojiInput.value)
-        emojiInput.value = ""
     }
     render()
 })
 
-shiftBtn.addEventListener("click", function() {
+shiftBtn.addEventListener("click", function () {
     myEmojis.shift(emojiInput.value)
-    emojiInput.value = ""
     render()
 })
