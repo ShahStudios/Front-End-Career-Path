@@ -3,13 +3,22 @@ const pushBtn = document.getElementById("push-btn")
 
 const myEmojis = ["👨🏽‍💻", "🎮", "🍕"]
 
-for (let i = 0; i < myEmojis.length; i++) {
-    emojiContainer.innerHTML += `<span>${myEmojis[i]}</span>`
+function render() {
+    for (let i = 0; i < myEmojis.length; i++) {
+        // console.log("loop")
+        emojiContainer.innerHTML += `<span>${myEmojis[i]}</span>`
+    }
 }
 
-const pushBtn = document.getElementById("push-btn")
-pushBtn.addEventListener("click", function() {
-    // console.log("click")
+pushBtn.addEventListener("click", function () {
     const emojiInput = document.getElementById("emoji-input")
-    console.log(emojiInput.value)
+
+    if (emojiInput.value) {
+        // Push the emoji into the myEmoji's array
+        myEmojis.push(emojiInput.value)
+        // clear the input field
+        emojiInput.value = ""
+    }
+    emojiContainer.innerHTML = ``
+    render()
 })
