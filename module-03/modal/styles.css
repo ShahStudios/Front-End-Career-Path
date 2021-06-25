@@ -6,10 +6,23 @@ body {
     text-align: center;
 }
 
-#open-modal, #close-modal {
+#open-modal,
+#close-modal {
     background-color: royalblue;
     color: white;
     padding: 15px;
     font-size: 20px;
     cursor: pointer;
+}
+
+#modal {
+    background-color: orange;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 200px;
+}
+
+#overlay {
+    display: none;
 }
