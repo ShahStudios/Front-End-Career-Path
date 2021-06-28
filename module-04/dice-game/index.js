@@ -8,10 +8,17 @@ const resetBtn = document.getElementById("resetBtn")
 
 let player1Score = 0
 let player2Score = 0
-let player1Turn = true 
+let player1Turn = true
 
 
-rollBtn.addEventListener("click", function() {
-    const randomNumber = Math.floor(Math.random() * 6) + 1 // 0-5 -> 1-6
-    // console.log(randomNumber)
+rollBtn.addEventListener("click", function () {
+    const randomNumber = Math.floor(Math.random() * 6) + 1
+
+    if (player1Turn) {
+        console.log("player 1 rolled: " + randomNumber)
+    } else {
+        console.log("player 2 rolled: " + randomNumber)
+    }
+    player1Turn = !player1Turn
 })
+
