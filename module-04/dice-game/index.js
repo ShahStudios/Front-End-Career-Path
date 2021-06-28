@@ -11,4 +11,7 @@ let player2Score = 0
 let player1Turn = true 
 
 
-// 
+rollBtn.addEventListener("click", function() {
+    const randomNumber = Math.floor(Math.random() * 6) + 1 // 0-5 -> 1-6
+    // console.log(randomNumber)
+})
